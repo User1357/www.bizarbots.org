@@ -4,6 +4,11 @@ const gih = require("gulp-include-html");
 const htmlmin = require('gulp-htmlmin');
 
 gulp.task('default', function() {
-    return gulp.src('./src/**/*.html')
+    gulp.src('./src/**/*.html')
+    .pipe(gih())
+    //.pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('bin'));
+
+    gulp.src('./static/**/*.*')
+    .pipe(gulp.dest('bin'))
 });
