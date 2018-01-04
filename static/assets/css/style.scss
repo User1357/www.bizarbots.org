@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    background-color: black;
+    background-image: url(https://www.transparenttextures.com/patterns/dark-mosaic.png);
+    font-family: 'Roboto';
+}
+.page_container {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    & > nav {
+        background-color: #eee;
+        display: flex;
+        padding: 10px;
+
+        h3 {
+            padding: 0 10px;
+            font-weight: 300;
+        }
+        nav {
+            align-self: flex-end;
+            margin-left: auto;
+            display: flex;
+
+            a {
+                padding: 5px;
+                color: #333;
+                text-decoration: none;
+                font-weight: 300;
+            }
+        }
+    }
+    & > main {
+        background-color: white;
+        padding: 20px;
+
+        h2:first-child {
+            margin-top: 0;
+            font-weight: 100;
+            font-size: 35px;
+        }
+        .figure-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            figure {
+                width: 200px;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+                figcaption {
+                    text-align: center;
+                }
+            }
+        }
+        &[data-page="sponsors"] {
+            .msg-box {
+                background-color: #eee;
+                padding: 20px;
+            }
+            & > p:not(.msg-box) {
+                font-size: 1.5em;
+                color: #aaa;
+                border-bottom: 1px solid #aaa;
+            }
+            .figure-list {
+                display: block;
+
+                figure {
+                    width: 140px;
+                    display: inline-flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    img {
+                        width: 150px;
+                        height: auto;
+                    }
+                    a[href] {
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}
+.dsf {
+    display: flex;
+
+    & > * {
+        padding: 10px;
+    }
+}
+a {
+    text-decoration: none;
+    color: #dd53ff;
+}
+dl > * {
+    padding: 10px;
+}
+header {
+    nav {
+        display: flex;
+        background-color: rgba(70, 0, 122, 0.35);
+
+        a {
+            padding: 15px;
+            color: white;
+            font-size: 0.9em;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, .3);
+                color: #444;
+            }
+            &:last-child {
+                margin-left: auto;
+            }
+        }
+    }
+}
+main {
+    flex-grow: 1;
+}
+footer {
+    display: flex;
+    background-color: #111;
+    padding-top: 20px;
+    justify-content: space-evenly;
+
+    & ~ footer {
+        padding-bottom: 20px;
+    }
+    ul {
+        margin: 0;
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+            padding: 5px;
+
+            a {
+                color: #888;
+                display: block;
+
+                &:not([href]) {
+                    color: white;
+                }
+                &[data-btn] {
+                    background-color: #333;
+                    padding: 10px;
+                    border-radius: 10px;
+                    color: white;
+                }
+            }
+        }
+    }
+    p {
+        margin: 0;
+        color: white;
+    }
+}
