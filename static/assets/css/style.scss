@@ -167,6 +167,7 @@ header {
     nav {
         display: flex;
         background-color: rgba(70, 0, 122, 0.35);
+        flex-wrap: wrap;
 
         a {
             padding: 15px;
