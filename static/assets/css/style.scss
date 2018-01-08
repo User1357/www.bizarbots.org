@@ -161,6 +161,9 @@ dl > * {
     padding: 10px;
 }
 header {
+    img {
+        max-width: 100vw;
+    }
     nav {
         display: flex;
         background-color: rgba(70, 0, 122, 0.35);
