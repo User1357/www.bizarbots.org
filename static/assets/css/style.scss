@@ -18,11 +18,14 @@ body {
         h3 {
             padding: 0 10px;
             font-weight: 300;
+            white-space: nowrap;
         }
         nav {
             align-self: flex-end;
             margin-left: auto;
             display: flex;
+            flex-wrap: wrap;
+            max-width: 75vw;
 
             a {
                 padding: 5px;
