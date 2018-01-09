@@ -3,12 +3,27 @@ const gulp = require('gulp');
 const gih = require("gulp-include-html");
 const htmlmin = require('gulp-htmlmin');
 
-gulp.task('default', function() {
-    gulp.src('./src/**/*.html')
+gulp.task('html', function() {
+    return gulp.src('./src/**/*.html')
     .pipe(gih())
     //.pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('bin'));
-
-    gulp.src('./static/**/*.*')
-    .pipe(gulp.dest('bin'))
 });
+
+gulp.task('assets', function() {
+    return gulp.src('./static/assets/**/*.*')
+    .pipe(gulp.dest('bin/assets'));
+});
+
+gulp.task('gallery', function() {
+    return gulp.src('./static/gallery')
+    .pipe(gulp.dest('bin/assets/img/gallery'));
+})
+
+gulp.task('site', [
+    'html', 'assets'
+]);
+
+gulp.task('default', [
+    'site', 'gallery'
+]);
