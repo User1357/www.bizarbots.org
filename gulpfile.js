@@ -18,7 +18,7 @@ gulp.task('assets', function() {
 gulp.task('gallery', function() {
     return gulp.src('./static/gallery')
     .pipe(gulp.dest('bin/assets/img/gallery'));
-})
+});
 
 gulp.task('site', [
     'html', 'assets'
