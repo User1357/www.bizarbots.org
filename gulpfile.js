@@ -20,8 +20,12 @@ gulp.task('gallery', function() {
     .pipe(gulp.dest('bin/assets/img/gallery'));
 });
 
+gulp.task('netlify', function() {
+    return gulp.src('./static/_headers').pipe(gulp.dest('bin'));
+});
+
 gulp.task('site', [
-    'html', 'assets'
+    'html', 'assets', 'netlify'
 ]);
 
 gulp.task('default', [
