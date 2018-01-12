@@ -3,9 +3,19 @@
 })
 @@include('./_header.html' , {
 })
-            <main>
+            <main data-page="media/photos">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+                <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+                <script defer src="../assets/js/media_photos.js"></script>
                 <h2>Photos</h2>
-                <h1>Coming soon!</h1>
+                <div id="gallery_list" style="display:none"></div>
+                <div id="gallery_photos" style="display:none">
+                    <h3></h3>
+                    <div></div>
+                </div>
             </main>
 @@include('../_footer.html', {
 })

@@ -102,6 +102,10 @@ body {
                 }
             }
         }
+        &[data-page="media/photos"] {
+            background-color: #222;
+            color: #eee;
+        }
     }
     & > .index-grid {
         & > div {
